@@ -41,19 +41,16 @@
 
 <body>
   <section id="container">
-    
     <header class="header black-bg">
       <div class="sidebar-toggle-box">
-        <div class="fa fa-bars tooltips" data-placement="right" data-original-title="Toggle Navigation"></div>
+        <div class="fa fa-bars tooltips" data-placement="right"></div>
       </div>
       <!--logo start-->
       <a href="index.html" class="logo"><b>Food</b><b class="text-success"> Donation</b></b></a>
       <!--logo end-->
       <li><a href="index.html"><button class="btn btn-success pull-right logout" href="index.html">Logout</button></a></li>
-      
-       
     </header>
-    <!--MAIN SIDEBAR MENU*********************************************************************************************************************************************************** -->
+
     <!--sidebar start-->
     <aside>
       <div id="sidebar" class="nav-collapse ">
@@ -62,13 +59,7 @@
           <p class="centered"><a href="profile.html"><img src="img/ui-sam.jpg" class="img-circle" width="80"></a></p>
           <h5 class="centered">User Name</h5>
           <li class="mt centered">
-            <button class="btn btn-success"><i class="fa fa-dashboard"></i>Dashboard</button>
-          </li>
-          <li class="mt centered">
-            <div class="feed-stats">You have feeded <h3>70</h3> peoples.</div>
-          </li>
-          <li class="mt centered">
-            <button href="#" data-toggle="modal" data-target="#at-login" class="btn btn-success">Dashboard</button>
+            <button href="#" data-toggle="modal" data-target="#at-login" class="btn btn-success">Update Details</button>
           </li>
         </ul>
         <!-- sidebar menu end-->
@@ -81,17 +72,16 @@
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Update your details.</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+              <span class="modal-title">Update your details.</span>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
           </div>
           <div class="modal-body">
             <form>
               <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
                 <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
