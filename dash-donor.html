@@ -21,6 +21,19 @@
   <link rel="stylesheet" type="text/css" href="lib/gritter/css/jquery.gritter.css" />
   <!-- Custom styles for this template -->
   <link href="css/style.css" rel="stylesheet">
+  <style>
+    /* .btn-group { */
+      /* margin-left: 60px;
+      padding-left: 15px; */
+      /* border: 1px solid red; */
+    /* } */
+    .btn-group-1 {
+      margin: 7px;
+    }
+    .modal-header {
+      background-color: orange;
+    }
+    </style>
   <link href="css/style-responsive.css" rel="stylesheet">
   <script src="lib/chart-master/Chart.js"></script>
 
@@ -36,68 +49,11 @@
       <!--logo start-->
       <a href="index.html" class="logo"><b>Food</b><b class="text-success"> Donation</b></b></a>
       <!--logo end-->
-      <div class="nav notify-row" id="top_menu">
-        <!--  notification start -->
-        <ul class="nav top-menu">
-          
-          <!-- notification dropdown start-->
-          <li id="header_notification_bar" class="dropdown">
-            <a data-toggle="dropdown" class="dropdown-toggle" href="index.html#">
-              <i class="fa fa-bell-o"></i>
-              <span class="badge bg-warning">7</span>
-              </a>
-            <ul class="dropdown-menu extended notification">
-              <div class="notify-arrow notify-arrow-yellow"></div>
-              <li>
-                <p class="yellow">You have 7 new notifications</p>
-              </li>
-              <li>
-                <a href="index.html#">
-                  <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                  Server Overloaded.
-                  <span class="small italic">4 mins.</span>
-                  </a>
-              </li>
-              <li>
-                <a href="index.html#">
-                  <span class="label label-warning"><i class="fa fa-bell"></i></span>
-                  Memory #2 Not Responding.
-                  <span class="small italic">30 mins.</span>
-                  </a>
-              </li>
-              <li>
-                <a href="index.html#">
-                  <span class="label label-danger"><i class="fa fa-bolt"></i></span>
-                  Disk Space Reached 85%.
-                  <span class="small italic">2 hrs.</span>
-                  </a>
-              </li>
-              <li>
-                <a href="index.html#">
-                  <span class="label label-success"><i class="fa fa-plus"></i></span>
-                  New User Registered.
-                  <span class="small italic">3 hrs.</span>
-                  </a>
-              </li>
-              <li>
-                <a href="index.html#">See all notifications</a>
-              </li>
-            </ul>
-          </li>
-          <!-- notification dropdown end -->
-        </ul>
-        <!--  notification end -->
-      </div>
-      
-          <li><a href="index.html"><button class="btn btn-success pull-right logout" href="index.html">Logout</button></a></li>
+      <li><a href="index.html"><button class="btn btn-success pull-right logout" href="index.html">Logout</button></a></li>
        
     </header>
-
-
     <!--MAIN SIDEBAR MENU*********************************************************************************************************************************************************** -->
     <!--sidebar start-->
-
-    
     <aside>
       <div id="sidebar" class="nav-collapse ">
         <!-- sidebar menu start-->
@@ -120,84 +76,50 @@
     <section id="main-content">
       <section class="wrapper">
         <div class="row">
-          <div class="col-lg-9">
+          <div class="">
               <div class="container">
-                  <h1>Start Contributing</h1>
-                  <form class="form-horizontal" role="form">
+                  <h1>Fill the details of your crop.</h1><br>
+                  <form method="post">
+                    <div class="form-row">
                       <div class="form-group">
-                          <label for="name" class="col-sm-2 control-label">Name:</label>
+                          <label for="name" class="">Quantity</label>
                             <div class="col-sm-4">
-                              <input type="text" class="form-control inputstl" id="name1" placeholder="Enter Your Full Name">
+                              <input type="text" class="form-control" id="name1" placeholder="Quantity(in quintals)">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="food-type" class="col-sm-2 control-label">Type</label>
-                            <div class="col-sm-2">
+                            <label for="food-type" class="">Crop Name</label>
+                            <div class="col-sm-4">
                                 <select class="form-control inputstl" id="food-type">
-                                    <option>Fresh Baked Food</option>
-                                    <option>Raw Food</option>
-                                    <option>Old Food</option>
+                                    <option>Wheat</option>
+                                    <option>Rice</option>
+                                    <option>Jawar</option>
                                 </select>
                             </div>
                         </div>
-
                         <div class="form-group">
-                            <label for="description" class="col-sm-2 control-label">Description:</label>
-                            <div class="col-sm-5">
-                                <input type="description" class="form-control inputstl" id="email1" placeholder="Tell something about food i.e., amount etc" maxlength="120">
-                            </div>
-                        </div>
-
+                          <label for="food-type" class="">Time Span</label>
+                          <div class="col-sm-4">
+                              <select class="form-control inputstl" id="food-type">
+                                  <option>1 Month</option>
+                                  <option>3 Month</option>
+                                  <option>6 Month</option>
+                              </select>
+                          </div>
+                      </div>
                         <div class="form-group">
-                            <label for="address1" class="col-sm-2 control-label">Landmark</label>
-                            <div class="col-sm-3">
-                                <input type="text" class="form-control inputstl" id="landmark" placeholder="Near OBC Bank..">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="address2" class="col-sm-2 control-label">Town/Village:</label>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control inputstl" id="address2" placeholder="Town">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <label for="address2" class="col-sm-2 control-label">District:</label>
-                            <div class="col-sm-5">
-                                <input type="text" class="form-control inputstl" id="address2" placeholder="District">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="state" class="col-sm-2 control-label">State</label>
                             <div class="col-sm-4">
-                              <input type="text" class="form-control inputstl" id="state" placeholder="Haryana">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="pin" class="col-sm-2 control-label">PIN Code:</label>
-                            <div class="col-sm-4">
-                              <input type="number" class="form-control inputstl" id="pin" placeholder="PIN Code">
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="name" class="col-sm-2 control-label">Mobile Number:</label>
-                            <div class="col-sm-4">
-                              <input type="number" class="form-control inputstl" id="name1" placeholder="Your Mobile Number">
-                            </div>
-                        </div>
-                        
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-4">
-                                <button type="submit" class="btn btn-lg btn-block btn-success">Submit Details</button>
+                                <button type="submit" class="btn btn-block btn-success">Submit Details</button>
                             </div>
                         </div>
                     </form>
-                </div> 
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
     <!-- js placed at the end of the document so the pages load faster -->
   <script src="lib/jquery/jquery.min.js"></script>
 
