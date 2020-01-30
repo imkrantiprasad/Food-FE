@@ -50,6 +50,7 @@
       <a href="index.html" class="logo"><b>Food</b><b class="text-success"> Donation</b></b></a>
       <!--logo end-->
       <li><a href="index.html"><button class="btn btn-success pull-right logout" href="index.html">Logout</button></a></li>
+      
        
     </header>
     <!--MAIN SIDEBAR MENU*********************************************************************************************************************************************************** -->
@@ -66,11 +67,49 @@
           <li class="mt centered">
             <div class="feed-stats">You have feeded <h3>70</h3> peoples.</div>
           </li>
+          <li class="mt centered">
+            <button href="#" data-toggle="modal" data-target="#at-login" class="btn btn-success">Dashboard</button>
+          </li>
         </ul>
         <!-- sidebar menu end-->
       </div>
     </aside>
     <!--sidebar end-->
+
+    <!-- modal -->
+    <div class="modal fade" id="at-login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Update your details.</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+              </div>
+              <div class="form-group form-check">
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+          <div class="modal-footer">
+
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!--main content start-->
     <section id="main-content">
@@ -122,7 +161,8 @@
                           <th scope="col">#</th>
                           <th scope="col">Crop</th>
                           <th scope="col">Quantity</th>
-                          <th scope="col">Place</th>
+                          <th scope="col">Time Span</th>
+                          <th scope="col">Status</th>
                         </tr>
                       </thead>
                       <tbody>
@@ -130,19 +170,22 @@
                           <th scope="row">1</th>
                           <td>Wheat</td>
                           <td>5</td>
-                          <td>xx</td>
+                          <td>1</td>
+                          <td>UP</td>
                         </tr>
                         <tr>
                           <th scope="row">2</th>
                           <td>Rice</td>
                           <td>8</td>
-                          <td>yy</td>
+                          <td>2</td>
+                          <td>Down</td>
                         </tr>
                         <tr>
                           <th scope="row">3</th>
                           <td>Jawar</td>
                           <td>9</td>
-                          <td>oo</td>
+                          <td>3</td>
+                          <td>Down</td>
                         </tr>
                       </tbody>
                     </table>
