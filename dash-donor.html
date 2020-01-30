@@ -7,7 +7,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <meta name="keyword" content="Dashboard">
-  <title>Donor- Dash</title>
+  <title>Farmer - Dash</title>
 
   <!-- Favicons -->
   <!-- <link href="img/favicon.png" rel="icon"> -->
@@ -75,23 +75,20 @@
     <!--main content start-->
     <section id="main-content">
       <section class="wrapper">
-        <div class="row">
-          <div class="">
               <div class="container">
-                  <h1>Fill the details of your crop.</h1><br>
-                  <form method="post">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <h2 class="">Fill the details of your crop.</h2>
+                    <form method="post">
                     <div class="form-row">
                       <div class="form-group">
-                          <label for="name" class="">Quantity</label>
-                            <div class="col-sm-4">
+                          <label for="name" class="">Quanity</label>
                               <input type="text" class="form-control" id="name1" placeholder="Quantity(in quintals)">
-                            </div>
-                        </div>
-
+                      </div>
                         <div class="form-group">
+                          <div class="">
                             <label for="food-type" class="">Crop Name</label>
-                            <div class="col-sm-4">
-                                <select class="form-control inputstl" id="food-type">
+                            <select class="form-control" id="food-type">
                                     <option>Wheat</option>
                                     <option>Rice</option>
                                     <option>Jawar</option>
@@ -99,9 +96,9 @@
                             </div>
                         </div>
                         <div class="form-group">
-                          <label for="food-type" class="">Time Span</label>
-                          <div class="col-sm-4">
-                              <select class="form-control inputstl" id="food-type">
+                          <div class="">
+                            <label for="food-type" class="">Time Span</label>
+                              <select class="form-control" id="food-type">
                                   <option>1 Month</option>
                                   <option>3 Month</option>
                                   <option>6 Month</option>
@@ -109,14 +106,49 @@
                           </div>
                       </div>
                         <div class="form-group">
-                            <div class="col-sm-4">
+                            <div class="">
                                 <button type="submit" class="btn btn-block btn-success">Submit Details</button>
                             </div>
                         </div>
                     </form>
                   </div>
                 </div>
-              </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <h2>Past History</h2>
+                    <table class="table">
+                      <thead>
+                        <tr>
+                          <th scope="col">#</th>
+                          <th scope="col">Crop</th>
+                          <th scope="col">Quantity</th>
+                          <th scope="col">Place</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Wheat</td>
+                          <td>5</td>
+                          <td>xx</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Rice</td>
+                          <td>8</td>
+                          <td>yy</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Jawar</td>
+                          <td>9</td>
+                          <td>oo</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                </div>
             </section>
           </section>
         </section>
@@ -135,68 +167,7 @@
   <!--script for this page-->
   <script src="lib/sparkline-chart.js"></script>
   <script src="lib/zabuto_calendar.js"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      var unique_id = $.gritter.add({
-        // (string | mandatory) the heading of the notification
-        title: 'Welcome to the community of Food savers!',
-        // (string | mandatory) the text inside the notification
-        text: 'Your waste and extra food can dine someone.',
-        // (string | optional) the image to display on the left
-        image: 'img/ui-sam.jpg',
-        // (bool | optional) if you want it to fade out on its own or just sit there
-        sticky: false,
-        // (int | optional) the time you want it to be alive for before fading out
-        time: 8000,
-        // (string | optional) the class name you want to apply to that specific message
-        class_name: 'my-sticky-class'
-      });
-
-      return false;
-    });
-  </script>
-  <script type="application/javascript">
-    $(document).ready(function() {
-      $("#date-popover").popover({
-        html: true,
-        trigger: "manual"
-      });
-      $("#date-popover").hide();
-      $("#date-popover").click(function(e) {
-        $(this).hide();
-      });
-
-      $("#my-calendar").zabuto_calendar({
-        action: function() {
-          return myDateFunction(this.id, false);
-        },
-        action_nav: function() {
-          return myNavFunction(this.id);
-        },
-        ajax: {
-          url: "show_data.php?action=1",
-          modal: true
-        },
-        legend: [{
-            type: "text",
-            label: "Special event",
-            badge: "00"
-          },
-          {
-            type: "block",
-            label: "Regular event",
-          }
-        ]
-      });
-    });
-
-    function myNavFunction(id) {
-      $("#date-popover").hide();
-      var nav = $("#" + id).data("navigation");
-      var to = $("#" + id).data("to");
-      console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
-    }
-  </script>
+  
 </body>
 
 </html>
